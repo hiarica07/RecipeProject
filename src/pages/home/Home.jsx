@@ -1,10 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import RecipeCard from './RecipeCard'
 import ContainerS, { ButtonS, FormS, InputS, SelectS } from './style'
 import homesvg from "../../assets/home.svg"
 import axios from "axios"
 
 const Home = () => {
+
+  const [recipe,setRecipe] = useState([])
+  const query = "chicken"
+  const meal = "lunch"
+  const APP_ID = "3b0240bd"
+  const APP_KEY = "88ceed6f2912b5603c6bc9b0ad600212"
+
+  const DATA_URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`
+
+  const getData=async()=>{
+
+    const meals = await axios(DATA_URL);
+    setRecipe(meals.data.hits);
+
+  
+  
+  }
+
+  useEffect(()=>{
+    getData()
+  },[])
+
+console.log(recipe);
+
+  
 
   return (
     <div>
