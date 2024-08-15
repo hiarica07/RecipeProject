@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ContainerS = styled.div`
+export const ContainerS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,5 +57,3 @@ export const SelectS = styled.select`
     font-size: 2rem;
     font-family: "Girassol", cursive;
 `
-
-export default ContainerS;

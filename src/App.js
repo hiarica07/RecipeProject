@@ -1,11 +1,12 @@
 import "./App.css";
+import RecipeProvider from "./context/RecipeProvider";
 import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div className="App">
+    <RecipeProvider>
       <AppRouter/>
-    </div>
+    </RecipeProvider>
   );
 }
 

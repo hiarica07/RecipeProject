@@ -10,10 +10,10 @@ const AppRouter = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Login/>} />
 
         <Route path="/home" element={<PrivateRouter />}>
-          <Route path="" element={<Home />} />
+          <Route path="/home" element={<Home />} />
         </Route>
       </Routes>
     </Router>
