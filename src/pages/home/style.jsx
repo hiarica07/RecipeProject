@@ -1,59 +1,59 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const ContainerS = styled.div`
+export const MainContainer = styled.div`
+  /* arama yapıldığında açılan yiyecek kartlarının kutusu RECİPECARD*/
+  display: flex;
+  flex-wrap: wrap;
+  /* sığmayan taşsın düşsün */
+  /* flex-direction: row; */
+  justify-content: center;
+ 
+`;
+
+export const Cards = styled.div`
+  /* search den sonra çıkan herbir yiyecek kart RECİPECARD*/
+  height: 300px;
+  background: #e1f1dd;
+  padding: 5px;
+  border-radius: 3px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  font-family: "Girassol", cursive;
-  background-color: #00ADB5;  
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  justify-content: space-evenly;
+  margin: 10px;
+  box-shadow: 8px 8px 5px black;
+  &:hover {
+    box-shadow: none;
+    transition: all 0.3s ease-in;
+    /* box-shadow: none özelliğinin yavaşça uygulanmasını sağlar; */
+  }
 `;
 
-export const FormS = styled.form`
-  display: flex;
-  flex-flow: wrap;
-  -webkit-box-pack: center;
-  justify-content: center;
-  border: 2px solid white;
+
+export const RecipeHeader = styled.h1`
+  /* kartlardaki yiyeceklerin adları */
+  font-size: 1.5rem;
+  text-align: center;
+`;
+
+
+export const RecipeImage = styled.img`
+  /* kartların içindeki resimler RECİPECARD */
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid red;
+`;
+
+
+export const RecipeButton = styled.button`
+  /* view more  buton */
+  background-color: #00adb5;
+  padding: 5px;
+  /* outline: none; */
+  height: 2rem;
+  border: none;
+  margin: 10px;
   border-radius: 3px;
-  margin: 40px 0;
-  font-family: "Girassol", cursive;
-`
-
-export const InputS = styled.input`
-    height: 3rem;
-    width: 15rem;
-    border: none;
-    border-radius: 3px;
-    outline: none;
-    text-indent: 10px;
-    margin: 5px;
-    font-size: 2rem;
-    font-family: "Girassol", cursive;
-    color: black;
-`
-export const ButtonS = styled.button`
-    background-color: rgb(225, 241, 221);
-    padding: 5px;
-    outline: none;
-    height: 3rem;
-    border: none;
-    margin: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 2rem;
-    font-family: "Girassol", cursive;
-`
-
-export const SelectS = styled.select`
-    border-radius: 3px;
-    margin: 5px;
-    padding: 5px;
-    height: 3rem;
-    border: none;
-    font-size: 2rem;
-    font-family: "Girassol", cursive;
-`
+  cursor: pointer;
+`;

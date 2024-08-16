@@ -1,24 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import RecipeCard from './RecipeCard'
 import homesvg from "../../assets/home.svg"
 import Header from '../../components/header/Header'
+import { RecipeContext } from '../../context/RecipeProvider'
 
 
 const Home = () => {
+
+  const {recipes}=useContext(RecipeContext)
 
 
   return (
     <div>
     <Header/>
-    <div>
 
-    <img src={homesvg} alt="" />
+    {recipes.length > 0 ? ( <RecipeCard/>) : <img src={homesvg} alt="" />}
 
-    
-    </div> 
-    <RecipeCard/>
     </div>
-    
+
   )
 }
 
